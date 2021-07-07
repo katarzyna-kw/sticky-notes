@@ -22,9 +22,15 @@ textarea {
   margin: 0;
 }
 
+.app-header {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Righteous', sans-serif;
+}
+
 .app-header__title {
   margin: 10px 20px 0px;
-  font-family: Arial, sans-serif;
+  color: #020205;
 }
 
 .app-header__controls {
@@ -36,6 +42,7 @@ textarea {
 .search,
 .add-new {
   font-size: 14px;
+  font-family: Righteous, sans-serif;
   padding: 5px;
   margin: 8px;
 }
@@ -43,6 +50,7 @@ textarea {
 .search {
   flex-grow: 1;
   max-width: 300px;
+  background-color: #FFDFD3;
 }
 
 .add-new {
@@ -50,18 +58,17 @@ textarea {
   cursor: pointer;
   padding: 8px;
   font-weight: bolder;
-  background-color: #eee;
+  background-color: #F5317A;
   outline: none;
 }
 
 .note {
-  font-family: "Permanent Marker", cursive;
   width: 200px;
   height: 200px;
   margin: 10px;
-  background-color: lightyellow;
-  border: 1px solid grey;
-  box-shadow: 2px 2px 3px lightgrey;
+  background-color: #FFDFD3;
+  border: 1px solid #FFDFD3;
+  box-shadow: 2px 1px 2px 2px #F5317A	;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -70,20 +77,23 @@ textarea {
 
 .note__title,
 .note__description {
-  font-family: "Permanent Marker", cursive;
   width: 100%;
   padding: 8px 14px;
   background: transparent;
+  border: none;
 }
 
 .note__title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
+  font-family: "Righteous", sans-serif;
+  text-transform: uppercase;
 }
 
 .note__description {
   flex-grow: 1;
-  font-size: 14px;
+  font-size: 1.1rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .note__delete {
@@ -91,11 +101,14 @@ textarea {
   top: 0px;
   right: 0px;
   font-size: 20px;
-  color: lightgrey;
+  color: gray;
   padding: 5px;
+  font-family: "Righteous", sans-serif;
+  text-transform: lowercase;
+  margin-right: .5rem;
 }
 
 .note__delete:hover {
-  color: black;
+  color: #020205;
   cursor: pointer;
 }
