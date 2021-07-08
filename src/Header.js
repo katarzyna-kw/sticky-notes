@@ -1,4 +1,4 @@
-const Header = () => (
+const Header = (props) => (
     <header className="app-header">
         <h1 className="app-header__title">
         Super Sticky Notes

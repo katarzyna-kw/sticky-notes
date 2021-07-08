@@ -1,4 +1,4 @@
-const Note = () => (
+const Note = (props) => (
     <li className="note">
       <input 
         className="note__title" 
