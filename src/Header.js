@@ -4,7 +4,9 @@ const Header = (props) => (
         Super Sticky Notes
         </h1>
         <aside className="app-header__controls">
-        <button className="add-new">+ New Note</button>
+        <button className="add-new" onClick={props.addNote}>
+            + New Note
+        </button>
         <input 
             className="search" 
             type="text" 
