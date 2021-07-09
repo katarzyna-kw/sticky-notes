@@ -42,25 +42,29 @@ textarea {
 
 .search,
 .add-new {
-  font-size: 14px;
   font-family: Righteous, sans-serif;
   padding: 5px;
   margin: 8px;
+  border-radius: 5px;
 }
 
 .search {
   flex-grow: 1;
   max-width: 300px;
   background-color: peachpuff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
 }
 
 .add-new {
-  border-radius: 5px;
   cursor: pointer;
-  padding: 8px;
   font-weight: bolder;
   background-color: #F5317A;
   outline: none;
+  font-family: "Righteous", sans-serif;
+  font-size: .8rem;
+  text-transform: uppercase;
+  padding: 8px;
 }
 
 .note {
