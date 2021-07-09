@@ -10,7 +10,12 @@ class Note extends Component {
     const updatedValue = e.target.value;
     const editId = this.props.note.id;
     this.props.onType(editId, "description", updatedValue)
-  }
+  };
+
+  clickDelete = () => {
+    const deleteId = this.props.note.id;
+    this.props.deleteNote(deleteId);
+  };
   render() {
     return (
     <li className="note">
@@ -27,7 +32,12 @@ class Note extends Component {
         value={this.props.note.description}
         onChange={this.updateDescription}
       />
-      <span className="note__delete">X</span>
+      <span 
+        className="note__delete"
+        onClick={this.clickDelete}
+      >
+        X
+      </span>
     </li>
     )
   }
