@@ -74,6 +74,17 @@ class App extends Component {
     const updatedNotes = this.state.notes.filter(doNotDelete);
     this.setState({ notes: updatedNotes });
   };
+  componentDidUpdate() {
+    const savedNotes = JSON.stringify(this.state.notes);
+    localStorage.setItem("savedNotes", savedNotes);
+  }; 
+  componentDidMount() {
+    const savedNotes = localStorage.getItem("savedNotes");
+    if (savedNotes) {
+    const savedState = JSON.parse(savedNotes);
+    this.setState({ notes: savedState });
+  }
+  };
   render() {
     return (
       <div>
