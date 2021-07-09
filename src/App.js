@@ -19,10 +19,10 @@ class App extends Component {
       id: Date.now(),
       title: "",
       description: "",
-      doesMatchSearch: true,
-    }
+      doesMatchSearch: true
+    };
     const newNotes = [newNote, ...this.state.notes];
-    this.setState({ notes: newNotes });    
+    this.setState({ notes: newNotes });
   };
   onType = (editId, updatedKey, updatedValue) => {
     const updateOnIdMatch = (note) => {
@@ -44,14 +44,43 @@ class App extends Component {
     const updatedNotes = this.state.notes.map(updateOnIdMatch)
     this.setState({ notes: updatedNotes });
   };
+  onSearch = (e) => {
+    const searchText = e.target.value.toLowerCase();
+    const updatedNotes = this.state.notes.map((note) => {
+      if (!searchText) {
+        return {
+          ...note, 
+          doesMatchSearch: true
+        };
+      } else {
+        const title = note.title.toLowerCase();
+        const description = note.description.toLowerCase();
+        const titleMatch = title.includes(searchText);
+        const descriptionMatch = description.includes(searchText)
+        const match = titleMatch || descriptionMatch;
+        return {
+          ...note,
+          doesMatchSearch: match
+        };
+      }
+    });
+    this.setState({
+      searchText: searchText,
+      notes: updatedNotes
+    });
+  };
   render() {
     return (
       <div>
-        <Header searchText={this.state.searchText} addNote={this.addNote}/>
-        <NotesList notes={this.state.notes} onType={this.onType}/>
+        <Header
+          searchText={this.state.searchText}
+          addNote={this.addNote}
+          onSearch={this.onSearch}
+        />
+        <NotesList notes={this.state.notes} onType={this.onType} />
       </div>
     );
   }
-};
+}
 
 export default App;
