@@ -25,11 +25,12 @@ textarea {
 .app-header {
   display: flex;
   justify-content: space-evenly;
-  font-family: 'Righteous', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
 }
 
 .app-header__title {
-  margin: 10px 20px 0px;
+  margin: 30px 10px 0px;
   color: #020205;
 }
 
@@ -50,7 +51,7 @@ textarea {
 .search {
   flex-grow: 1;
   max-width: 300px;
-  background-color: #FFDFD3;
+  background-color: peachpuff;
 }
 
 .add-new {
@@ -66,7 +67,7 @@ textarea {
   width: 200px;
   height: 200px;
   margin: 10px;
-  background-color: #FFDFD3;
+  background-color: peachpuff;
   border: 1px solid #FFDFD3;
   box-shadow: 2px 1px 2px 2px #F5317A	;
   border-radius: 5px;
