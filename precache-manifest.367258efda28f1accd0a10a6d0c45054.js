@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/sticky-notes/static/js/2.689a4215.chunk.js"
   },
   {
-    "revision": "2c0f286194b76eda81e3fb1fd93a8b5b",
+    "revision": "ad8fdb6bba4f8ef841d688e354732810",
     "url": "/sticky-notes/index.html"
   }
 ];
